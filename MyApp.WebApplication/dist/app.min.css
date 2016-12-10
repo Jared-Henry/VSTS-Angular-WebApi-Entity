@@ -1,0 +1,12 @@
+thing-list {
+  display: block;
+}
+
+thing-view {
+  display: block;
+}
+thing-view .form-group .alert {
+  margin-top: .3em;
+}
+
+/*# sourceMappingURL=app.min.css.map */

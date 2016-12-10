@@ -1,0 +1,27 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Things</h2>
+    </div>
+    <div class="panel-body">
+        <a href="#/things/new" class="btn btn-primary">Create New Thing</a>
+    </div>
+    <table class="table table-striped" ng-if="$ctrl.things.length > 0">
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="thing in $ctrl.things | orderBy: 'name'">
+                <td><a ui-sref="thing({id: thing.id})">View</a></td>
+                <td>{{thing.id}}</td>
+                <td>{{thing.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="panel-body" ng-if="$ctrl.things.length == 0">
+        <p>No things have been added.</p>
+    </div>
+</div>

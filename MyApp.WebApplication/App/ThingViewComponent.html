@@ -1,0 +1,19 @@
+﻿<form name="form" novalidate>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>Thing View</h2>
+        </div>
+        <div class="panel-body">
+            <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$invalid }">
+                <label class="control-label">
+                    Name
+                </label>
+                <input name="name" ng-model="$ctrl.thing.name" required class="form-control" />
+                <div class="alert alert-danger" ng-if="form.name.$dirty && form.name.$invalid">
+                    This field is required.
+                </div>
+            </div>
+            <button class="btn btn-primary" ng-click="$ctrl.save()" ng-disabled="form.$invalid">Save</button>
+        </div>
+    </div>
+</form>

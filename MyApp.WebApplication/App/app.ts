@@ -1,4 +1,4 @@
-﻿angular.module('app', ['ui.router']).config(($stateProvider: ng.ui.IStateProvider, $locationProvider: ng.ILocationProvider) => {
+﻿angular.module('app', ['ui.router', 'ui.bootstrap']).config(($stateProvider: ng.ui.IStateProvider, $locationProvider: ng.ILocationProvider) => {
     var states: ng.ui.IState[] = [
         {
             name: 'test',
@@ -29,6 +29,11 @@
             name: 'things',
             url: '/things',
             template: '<thing-list></thing-list>'
+        },
+        {
+            name: 'tester',
+            url: '/tester',
+            template: '<tester></tester>'
         }
     ];
     states.forEach(state => $stateProvider.state(state));

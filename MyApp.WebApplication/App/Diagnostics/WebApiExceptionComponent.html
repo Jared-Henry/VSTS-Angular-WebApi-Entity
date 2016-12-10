@@ -1,0 +1,6 @@
+﻿<div class="exception-message" ng-click="$ctrl.toggleStackTrace()" title="Click to toggle stack trace">
+    <i class="fa fa-list"></i>
+    <span>{{$ctrl.exception.exceptionType}}: {{$ctrl.exception.exceptionMessage}}</span>
+</div>
+<pre class="stack-trace" ng-if="$ctrl.showStackTrace">{{$ctrl.exception.stackTrace}}</pre>
+<web-api-exception ng-if="$ctrl.exception.innerException" exception="$ctrl.exception.innerException"></web-api-exception>

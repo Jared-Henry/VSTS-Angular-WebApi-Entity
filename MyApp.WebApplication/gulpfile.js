@@ -15,7 +15,8 @@ var dependenciesCopy = {
         'bootstrap/+(dist|less)/**/*.*',
         'angular/angular.js',
         'angular-ui-router/release/angular-ui-router.js',
-        'font-awesome/+(css|fonts)/**/*.*'
+        'angular-ui-bootstrap/dist/*.js',
+        'font-awesome/+(css|fonts)/**/*.*',        
     ]
 };
 var dependenciesJs = {
@@ -25,7 +26,9 @@ var dependenciesJs = {
         'jquery/dist/jquery.js',
         'angular/angular.js',
         'angular-ui-router/release/angular-ui-router.js',
-        'bootstrap/dist/bootstrap.js'
+        'bootstrap/dist/bootstrap.js',
+        'angular-ui-bootstrap/dist/ui-bootstrap.js',
+        'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'
     ]
 };
 var appJs = {
@@ -44,7 +47,7 @@ var appLess = {
     ]
 };
 
-gulp.task('build-all', ['build-dep-js', 'build-app-js']);
+gulp.task('build-all', ['build-dep-js', 'build-app-js', 'build-app-less']);
 
 gulp.task('copy-dependencies', function () {
     var src = dependenciesCopy.src.map(s => path.join(dependenciesCopy.base, s));
@@ -74,7 +77,7 @@ gulp.task('build-app-js', function () {
         .pipe(gulp.dest(distFolder));
 });
 
-gulp.task('build-app-css', function () {
+gulp.task('build-app-less', function () {
     return gulp.src(appLess.src)
         .pipe(sourcemaps.init())
         .pipe(less())

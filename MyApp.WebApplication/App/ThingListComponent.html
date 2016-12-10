@@ -3,7 +3,7 @@
         <h2>Things</h2>
     </div>
     <div class="panel-body">
-        <a href="#/things/new" class="btn btn-primary">Create New Thing</a>
+        <a ui-sref="thing({id: 'new'})" class="btn btn-primary">Create New Thing</a>
     </div>
     <table class="table table-striped" ng-if="$ctrl.things.length > 0">
         <thead>

@@ -21,6 +21,8 @@ namespace MyApp.Data
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Entity<Thing>().Property(t => t.Name).IsRequired().HasMaxLength(256);
+            modelBuilder.Entity<Widget>().Property(w => w.Name).IsRequired().HasMaxLength(256);
         }
     }
 }

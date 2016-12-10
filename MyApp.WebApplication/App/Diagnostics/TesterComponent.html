@@ -1,0 +1,43 @@
+﻿<h2>Component Tests</h2>
+<uib-tabset active="$ctrl.tabIndex">
+    <uib-tab heading="Async Content">
+        <form>
+            <div class="form-group">
+                <label class="control-label">State</label>
+                <select class="form-control" ng-model="$ctrl.asyncContentState" ng-change="$ctrl.asyncContentStateChange()">
+                    <option value="Initial">Initial</option>
+                    <option value="Loading">Loading</option>
+                    <option value="Success">Success</option>
+                    <option value="ErrorHttp">Error: Http</option>
+                    <option value="ErrorJavascript">Error: Javascript</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Message</label>
+                <input class="form-control" ng-model="$ctrl.asyncContentMessage" />
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="$ctrl.asyncContentHideOnNullPromise" />
+                    Hide on null promise
+                </label>
+            </div>
+            <async-content promise="$ctrl.asyncContentPromise" message="$ctrl.asyncContentMessage" hide-on-null-promise="$ctrl.asyncContentHideOnNullPromise">
+                <div class="alert alert-info">
+                    This is the async content.
+                </div>
+            </async-content>
+            <error-view ng-if="$ctrl.asyncContentError" error="$ctrl.asyncContentError"></error-view>
+        </form>
+    </uib-tab>
+    <uib-tab heading="JS Exception">
+        <div class="form-group">
+            <label class="control-label">Levels</label>
+            <input type="number" class="form-control" ng-model="$ctrl.javascriptExceptionLevels" />
+        </div>
+        <p>
+            <button class="btn btn-primary" ng-click="$ctrl.throwJavascriptException()">Throw</button>
+        </p>
+        <javascript-exception ng-if="$ctrl.javascriptException" exception="$ctrl.javascriptException"></javascript-exception>
+    </uib-tab>
+</uib-tabset>

@@ -165,25 +165,69 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\ThingListComponent.ts" />
-    <Content Include="App\ThingListComponent.html" />
-    <Content Include="App\ThingViewComponent.html" />
+    <Content Include="App\AsyncContentComponent.html">
+      <DependentUpon>AsyncContentComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\AsyncContentComponent.less">
+      <DependentUpon>AsyncContentComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\TesterComponent.html">
+      <DependentUpon>TesterComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\TesterComponent.less">
+      <DependentUpon>TesterComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\ErrorViewComponent.html">
+      <DependentUpon>ErrorViewComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\ErrorViewComponent.less">
+      <DependentUpon>ErrorViewComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\JavascriptExceptionComponent.html">
+      <DependentUpon>JavascriptExceptionComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\JavascriptExceptionComponent.less">
+      <DependentUpon>JavascriptExceptionComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\ThingListComponent.html">
+      <DependentUpon>ThingListComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\ThingListComponent.less">
+      <DependentUpon>ThingListComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\ThingViewComponent.html">
+      <DependentUpon>ThingViewComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\ThingViewComponent.less">
+      <DependentUpon>ThingViewComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\WebApiExceptionComponent.html">
+      <DependentUpon>WebApiExceptionComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\WebApiExceptionComponent.less">
+      <DependentUpon>WebApiExceptionComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="dist\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="dist\font-awesome\css\font-awesome.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="node_modules\bootstrap\dist\css\bootstrap.css" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="Typewriter\WebApiControllers.tst" />
     <Content Include="Typewriter\WebApiDtos.tst" />
     <Content Include="default.cshtml" />
-    <Content Include="App\ThingViewComponent.less" />
-    <Content Include="App\ThingListComponent.less" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+    <TypeScriptCompile Include="App\AsyncContentComponent.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\TesterComponent.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\ErrorViewComponent.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\IWebApiException.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\JavascriptExceptionComponent.ts" />
+    <TypeScriptCompile Include="App\ThingListComponent.ts" />
     <TypeScriptCompile Include="App\ThingViewComponent.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\App.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\WebApiExceptionComponent.ts" />
     <TypeScriptCompile Include="Typewriter\ThingController.ts">
       <DependentUpon>WebApiControllers.tst</DependentUpon>
       <CustomToolNamespace>..\MyApp.Api\ThingController.cs</CustomToolNamespace>

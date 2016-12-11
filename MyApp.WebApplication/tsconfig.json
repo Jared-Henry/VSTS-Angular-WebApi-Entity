@@ -3,10 +3,11 @@
     "noImplicitAny": false,
     "noEmitOnError": true,
     "removeComments": false,
-    "sourceMap": true,
+    "lib": ["dom","es6"],
     "target": "es5",
-    "noEmit": true
-  },
+    "noEmit": true,
+    "typeRoots": ["node_modules/@types"]
+  },  
   "exclude": [
     "node_modules",
     "wwwroot"

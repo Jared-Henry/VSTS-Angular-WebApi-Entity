@@ -25,7 +25,7 @@ namespace WebApplication
         public void Configuration(IAppBuilder app)
         {
             //Configure Entity Framework
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDbContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDbContext, Configuration>(true));
 
             //Configure AutoMapper
             Mapper.Initialize(config =>

@@ -18,7 +18,7 @@ var dependenciesCopy = {
         'angular-ui-router/release/angular-ui-router.js',
         'angular-ui-bootstrap/dist/*.js',
         'lodash/lodash.js',
-        'font-awesome/+(css|fonts)/**/*.*',        
+        'font-awesome/+(css|fonts)/**/*.*',
     ]
 };
 var dependenciesJs = {
@@ -27,7 +27,7 @@ var dependenciesJs = {
     src: [
         'jquery/dist/jquery.js',
         'lodash/lodash.js',
-        'angular/angular.js',        
+        'angular/angular.js',
         'angular-ui-router/release/angular-ui-router.js',
         'bootstrap/dist/bootstrap.js',
         'angular-ui-bootstrap/dist/ui-bootstrap.js',
@@ -44,6 +44,7 @@ var appJs = {
     ]
 };
 var appLess = {
+    base: 'app',
     output: 'app.min.css',
     src: [
         'app/**/*.less'
@@ -69,7 +70,7 @@ gulp.task('build-dep-js', ['copy-dependencies'], function () {
 });
 
 gulp.task('build-app-js', function () {
-    return gulp.src(appJs.src)
+    return gulp.src(appJs.src, { base: appJs.base })
         .pipe(sourcemaps.init())
         .pipe(typescript({
             target: 'es5',
@@ -80,14 +81,14 @@ gulp.task('build-app-js', function () {
         .pipe(gulp.dest(distFolder));
 });
 
-gulp.task('build-app-less', function () {
-    return gulp.src(appLess.src)
+gulp.task('build-app-less',['copy-dependencies'], function () {
+    return gulp.src(appLess.src, { base: appLess.base })
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(concat(appLess.output))
-        .pipe(sourcemaps.write('.', { includeContent: false }))
+        .pipe(sourcemaps.write('.', { includeContent: false, sourceRoot: '..' }))
         .pipe(gulp.dest(distFolder));
-})
+});
 
 gulp.task('watch', ['build-all'], function () {
     gulp.watch(appJs.src, ['build-app-js']);

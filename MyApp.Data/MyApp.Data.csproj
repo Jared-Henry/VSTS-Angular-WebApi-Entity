@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201612110125546_Initialize.Designer.cs">
       <DependentUpon>201612110125546_Initialize.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612112252314_NotSure.cs" />
+    <Compile Include="Migrations\201612112252314_NotSure.Designer.cs">
+      <DependentUpon>201612112252314_NotSure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDbContext.cs" />
     <Compile Include="MyDbContextFactory.cs" />
@@ -67,6 +71,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612110125546_Initialize.resx">
       <DependentUpon>201612110125546_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612112252314_NotSure.resx">
+      <DependentUpon>201612112252314_NotSure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

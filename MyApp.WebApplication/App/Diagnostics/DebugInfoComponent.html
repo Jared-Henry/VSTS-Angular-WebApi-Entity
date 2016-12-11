@@ -1,3 +1,16 @@
-﻿<div class="alert alert-info">
-
+﻿<div class="info">
+    <div class="name">Environment</div>
+    <div class="value">{{$ctrl.debugInfo.environment.name}}</div>
+</div>
+<div class="info">
+    <div class="name">Build</div>
+    <div class="value">
+        <a href="{{$ctrl.debugInfo.build.url}}">{{$ctrl.debugInfo.build.number}}</a>
+    </div>
+</div>
+<div class="info">
+    <div class="name">Release</div>
+    <div class="value">
+        <a href="{{$ctrl.debugInfo.release.url}}">{{$ctrl.debugInfo.release.name}}</a>
+    </div>
 </div>

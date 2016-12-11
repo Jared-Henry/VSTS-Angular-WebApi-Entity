@@ -1,5 +1,5 @@
 ﻿class DebugInfoComponent {
-
+    constructor(private debugInfo: any) { }
 }
 
 angular.module('app').component('debugInfo', {

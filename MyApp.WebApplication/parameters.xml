@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <parameter name="Environment Name" description="" defaultValue="#{Release.EnvironmentName}#">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/appSettings/add[@key='environment.name']/@value" />
+  </parameter>
+  <parameter name="Build Number" description="" defaultValue="#{Build.BuildNumber}#">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/appSettings/add[@key='build.number']/@value" />
+  </parameter>
+  <parameter name="Build URL" description="" defaultValue="#{System.TeamFoundationCollectionUri}##{System.TeamProject}#/_build/index?buildId=#{Build.BuildId}#">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/appSettings/add[@key='build.url']/@value" />
+  </parameter>
+  <parameter name="Release Name" description="" defaultValue="#{Release.ReleaseName}#">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/appSettings/add[@key='release.name']/@value" />
+  </parameter>
+  <parameter name="Release URL" description="" defaultValue="#{System.TeamFoundationCollectionUri}#DefaultCollection/#{System.TeamProject}#/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?releaseId=#{Release.ReleaseId}#">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/appSettings/add[@key='release.url']/@value" />
+  </parameter>
+</parameters>

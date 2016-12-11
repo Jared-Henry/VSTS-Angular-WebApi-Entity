@@ -179,7 +179,12 @@
     </Content>
     <TypeScriptCompile Include="App\AppComponent.ts" />
     <TypeScriptCompile Include="App\Diagnostics\DebugInfoComponent.ts" />
-    <Content Include="App\Diagnostics\DebugInfoComponent.html" />
+    <Content Include="App\Diagnostics\DebugInfoComponent.html">
+      <DependentUpon>DebugInfoComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\Diagnostics\DebugInfoComponent.less">
+      <DependentUpon>DebugInfoComponent.ts</DependentUpon>
+    </Content>
     <Content Include="App\Diagnostics\TesterComponent.html">
       <DependentUpon>TesterComponent.ts</DependentUpon>
     </Content>
@@ -229,11 +234,13 @@
     <Content Include="dist\font-awesome\css\font-awesome.css" />
     <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
+    <Content Include="parameters.xml" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="Typewriter\WebApiControllers.tst" />
     <Content Include="Typewriter\WebApiDtos.tst" />
     <Content Include="default.cshtml" />
+    <None Include="Properties\PublishProfiles\WebDeployPackage.pubxml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

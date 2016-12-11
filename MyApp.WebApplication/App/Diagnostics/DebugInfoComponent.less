@@ -1,0 +1,20 @@
+﻿@import (reference) "../../dist/bootstrap/less/variables.less";
+
+debug-info {
+    .info {
+        display: inline-block;
+        padding: @padding-base-vertical @padding-base-horizontal;
+
+        * {
+            display: inline-block;
+        }
+
+        .name {
+            font-weight: bold;
+        }
+
+        .name:after {
+            content: ':';
+        }
+    }
+}

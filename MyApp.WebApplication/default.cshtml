@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Configuration;
+
+<!DOCTYPE html>
 <html ng-app="app">
 <head>
     <title>My App</title>
@@ -10,5 +12,27 @@
     <app></app>
     <script type="text/javascript" src="~/dist/dep.min.js"></script>
     <script type="text/javascript" src="~/dist/app.min.js"></script>
+    @{ 
+        var debugInfo = new
+        {
+            environment = new
+            {
+                name = WebConfigurationManager.AppSettings["environment"]
+            },
+            build = new
+            {
+                number = WebConfigurationManager.AppSettings["build.number"],
+                url = WebConfigurationManager.AppSettings["build.url"]
+            },
+            release = new
+            {
+                name = WebConfigurationManager.AppSettings["release.name"],
+                url = WebConfigurationManager.AppSettings["release.url"]
+            }
+        };
+    }
+    <script type="text/javascript">
+        angular.module('app').constant('debugInfo', @Html.Raw(Json.Encode(debugInfo)));
+    </script>
 </body>
 </html>

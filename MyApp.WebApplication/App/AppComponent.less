@@ -1,10 +1,23 @@
 ﻿@import (reference) "../dist/bootstrap/less/variables.less";
 
+body{
+    padding-bottom:4em;
+}
+
 app {
     display: block;
 
-    select.form-control{
-        width:auto;
+    .app-debug-info {
+        position: fixed;
+        bottom: 0px;
+        border-radius: 0px;
+        margin: 0px;
+        width: 100%;
+        padding:0px;
+    }
+
+    select.form-control {
+        width: auto;
     }
 
     ui-view {
@@ -29,7 +42,7 @@ app {
             display: block;
 
             & > * > .message {
-                padding:@panel-body-padding;
+                padding: @panel-body-padding;
             }
         }
 

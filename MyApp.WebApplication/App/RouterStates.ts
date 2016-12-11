@@ -1,5 +1,12 @@
 ﻿angular.module('app').constant('routerStates', [
 
+    //Home Page
+    {
+        name: 'home',
+        url: '/',
+        template: '<home/>'
+    },
+
     //Widgets
     {
         name: 'widgets',

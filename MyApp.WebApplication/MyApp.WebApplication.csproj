@@ -198,6 +198,9 @@
     <Content Include="App\Diagnostics\JavascriptExceptionComponent.less">
       <DependentUpon>JavascriptExceptionComponent.ts</DependentUpon>
     </Content>
+    <Content Include="App\HomeComponent.html">
+      <DependentUpon>HomeComponent.ts</DependentUpon>
+    </Content>
     <Content Include="App\ThingListComponent.html">
       <DependentUpon>ThingListComponent.ts</DependentUpon>
     </Content>
@@ -242,6 +245,7 @@
     <TypeScriptCompile Include="App\Diagnostics\ErrorViewComponent.ts" />
     <TypeScriptCompile Include="App\Diagnostics\IWebApiException.ts" />
     <TypeScriptCompile Include="App\Diagnostics\JavascriptExceptionComponent.ts" />
+    <TypeScriptCompile Include="App\HomeComponent.ts" />
     <TypeScriptCompile Include="App\RouterStates.ts" />
     <TypeScriptCompile Include="App\ThingListComponent.ts" />
     <TypeScriptCompile Include="App\ThingViewComponent.ts" />

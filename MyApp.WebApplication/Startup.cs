@@ -14,6 +14,7 @@ using Ninject;
 using Ninject.Web.WebApi.OwinHost;
 using System.Data.Entity.Infrastructure;
 using System.Web.Routing;
+using MyApp.Data.Migrations;
 
 [assembly: OwinStartup(typeof(WebApplication.Startup))]
 
@@ -24,7 +25,7 @@ namespace WebApplication
         public void Configuration(IAppBuilder app)
         {
             //Configure Entity Framework
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<MyDbContext>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDbContext, Configuration>());
 
             //Configure AutoMapper
             Mapper.Initialize(config =>

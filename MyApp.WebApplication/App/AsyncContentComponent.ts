@@ -1,12 +1,12 @@
 ﻿class AsyncContentComponent {
     constructor(private $q: ng.IQService, private $scope: ng.IScope) { }
 
-    static DEFAULT_MESSAGE = 'Loading...';
+    static DEFAULT_MESSAGE = '';
     static DEFAULT_ERROR_MESSAGE = 'An error occured while processing your request.';
 
     promise: ng.IPromise<any>;
     hideOnNullPromise: boolean;
-    state = AsyncContentComponentState.Hide;
+    state: AsyncContentComponentState;  
     error: any;
     errorMessage: string;
     message: string;
@@ -35,29 +35,33 @@
         this.$scope.$emit('asyncContentError', this.error);
     }
 
-    $onChanges(changes: ng.IOnChangesObject) {
-        if (changes["promise"]) {
-            if (this.promise) {
-                this.state = AsyncContentComponentState.Message;
-                this.promise.then(() => {
-                    this.state = AsyncContentComponentState.Content;
-                }).catch((error) => {
-                    this.error = error;
-                    this.state = AsyncContentComponentState.Error;
-                });
-            }
-            else {
-                this.state = this.hideOnNullPromise ? AsyncContentComponentState.Hide : AsyncContentComponentState.Content;
-            }
-        }
-        else if(!this.promise && this.hideOnNullPromise) {
-            this.state = AsyncContentComponentState.Hide;
-        }
+    $onInit() {
+        if (this.promise)
+            this.handlePromise();
+        else
+            this.state = AsyncContentComponentState.Content;
     }
+
+    $onChanges(changes: ng.IOnChangesObject) {
+        if (changes["promise"])
+            if (this.promise)
+                this.handlePromise();
+            else
+                this.state = AsyncContentComponentState.Content;
+    }
+
+    handlePromise() {
+        this.state = AsyncContentComponentState.Message;
+        this.promise.then(() => {
+            this.state = AsyncContentComponentState.Content;
+        }).catch((error) => {
+            this.error = error;
+            this.state = AsyncContentComponentState.Error;
+        });
+    } 
 }
 
 enum AsyncContentComponentState {
-    Hide,
     Content,
     Message,
     Error
@@ -70,7 +74,7 @@ angular.module('app').component('asyncContent', {
     bindings: {
         promise: '<',
         hideOnNullPromise: '<',
-        message: '<',
-        errorMessage: '<'
+        message: '@',
+        errorMessage: '@'
     }
 });

@@ -1,0 +1,40 @@
+﻿@import (reference) "../dist/bootstrap/less/variables.less";
+
+app {
+    display: block;
+
+    select.form-control{
+        width:auto;
+    }
+
+    ui-view {
+        & > * > async-content {
+            display: block;
+        }
+
+        .btn > .fa + span {
+            display: inline-block;
+            margin-left: .5em;
+        }
+
+        .btn + async-content {
+            margin-left: .5em;
+        }
+
+        async-content + .btn {
+            margin-left: .5em;
+        }
+
+        .panel > async-content {
+            display: block;
+
+            & > * > .message {
+                padding:@panel-body-padding;
+            }
+        }
+
+        .panel-body > async-content {
+            display: block;
+        }
+    }
+}

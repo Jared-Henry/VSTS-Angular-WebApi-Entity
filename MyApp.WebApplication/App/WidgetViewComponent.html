@@ -1,0 +1,30 @@
+﻿<form name="form" novalidate>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>
+                Widget
+                <span ng-if="$ctrl.widget">: {{$ctrl.widget.id ? $ctrl.widget.name : 'New'}}</span>
+            </h2>
+        </div>
+        <div class="panel-body">
+            <async-content promise="$ctrl.initPromise">
+                <div class="form-group" ng-class="{'has-error': form.name.$dirty && form.name.$invalid}">
+                    <label class="control-label">Name</label>
+                    <input class="form-control" ng-model="$ctrl.widget.name" required />
+                    <div class="alert alert-danger" ng-if="form.name.$dirty && form.name.$invalid">
+                        This field is required.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Thing</label>
+                    <select class="form-control"
+                            ng-model="$ctrl.widget.thingId" 
+                            ng-options="thing.id as thing.name for thing in $ctrl.things | orderBy: 'name'"
+                            required></select>
+                </div>
+                <button class="btn btn-primary" ng-click="$ctrl.save()" ng-disabled="form.$invalid">Save</button>
+                <async-content promise="$ctrl.savePromise" ng-if="$ctrl.savePromise" />
+            </async-content>
+        </div>
+    </div>
+</form>

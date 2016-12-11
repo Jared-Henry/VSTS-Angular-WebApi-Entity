@@ -1,4 +1,5 @@
-﻿var gulp = require('gulp');
+﻿/// <binding ProjectOpened='watch' />
+var gulp = require('gulp');
 var concat = require('gulp-concat');
 var typescript = require('gulp-typescript');
 var util = require('gulp-util');
@@ -16,6 +17,7 @@ var dependenciesCopy = {
         'angular/angular.js',
         'angular-ui-router/release/angular-ui-router.js',
         'angular-ui-bootstrap/dist/*.js',
+        'lodash/lodash.js',
         'font-awesome/+(css|fonts)/**/*.*',        
     ]
 };
@@ -24,7 +26,8 @@ var dependenciesJs = {
     output: 'dep.min.js',
     src: [
         'jquery/dist/jquery.js',
-        'angular/angular.js',
+        'lodash/lodash.js',
+        'angular/angular.js',        
         'angular-ui-router/release/angular-ui-router.js',
         'bootstrap/dist/bootstrap.js',
         'angular-ui-bootstrap/dist/ui-bootstrap.js',
@@ -86,7 +89,7 @@ gulp.task('build-app-less', function () {
         .pipe(gulp.dest(distFolder));
 })
 
-gulp.task('watch', function () {
+gulp.task('watch', ['build-all'], function () {
     gulp.watch(appJs.src, ['build-app-js']);
     gulp.watch(appLess.src, ['build-app-less']);
-})
+});

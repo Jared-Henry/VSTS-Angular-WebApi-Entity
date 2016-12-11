@@ -1,19 +1,23 @@
-﻿<form name="form" novalidate>
+﻿
+<form name="form" novalidate>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h2>Thing View</h2>
+            <h2>Thing: {{$ctrl.thing.id ? $ctrl.thing.name : 'New'}}</h2>
         </div>
         <div class="panel-body">
-            <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$invalid }">
-                <label class="control-label">
-                    Name
-                </label>
-                <input name="name" ng-model="$ctrl.thing.name" required class="form-control" />
-                <div class="alert alert-danger" ng-if="form.name.$dirty && form.name.$invalid">
-                    This field is required.
+            <async-content promise="$ctrl.initPromise" message="Loading thing...">
+                <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$invalid }">
+                    <label class="control-label">
+                        Name
+                    </label>
+                    <input name="name" ng-model="$ctrl.thing.name" required class="form-control" />
+                    <div class="alert alert-danger" ng-if="form.name.$dirty && form.name.$invalid">
+                        This field is required.
+                    </div>
                 </div>
-            </div>
-            <button class="btn btn-primary" ng-click="$ctrl.save()" ng-disabled="form.$invalid">Save</button>
+                <button class="btn btn-primary" ng-click="$ctrl.save()" ng-disabled="form.$invalid">Save</button>
+                <async-content promise="$ctrl.savePromise"></async-content>
+            </async-content>
         </div>
     </div>
 </form>

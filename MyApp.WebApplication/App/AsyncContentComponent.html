@@ -1,10 +1,14 @@
-﻿<div class="message" ng-if="$ctrl.showMessage()">
-    <i class="fa fa-spinner fa-spin"></i>
-    <span>{{$ctrl.message}}</span>
-</div>
-<div class="content" ng-if="$ctrl.showContent()" ng-transclude></div>
-<div class="error" ng-if="$ctrl.showError()" ng-click="$ctrl.emitAsyncContentError()" title="Click for more details">
-    <i class="fa fa-warning text-danger"></i>
-    <span>{{$ctrl.getErrorMessage()}}</span>
-    <span>(Click for more details.)</span>
+﻿<div ng-if="$ctrl.promise || !$ctrl.hideOnNullPromise">
+    <div class="message" ng-if="$ctrl.showMessage()">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>{{$ctrl.message}}</span>
+    </div>
+    <div class="content" ng-if="$ctrl.showContent()" ng-transclude>
+        <i class="fa fa-check text-success" title="Operation completed successfully"></i>
+    </div>
+    <div class="error" ng-if="$ctrl.showError()" ng-click="$ctrl.emitAsyncContentError()" title="Click for more details">
+        <i class="fa fa-warning text-danger"></i>
+        <span>{{$ctrl.getErrorMessage()}}</span>
+        <span>(Click for more details.)</span>
+    </div>
 </div>

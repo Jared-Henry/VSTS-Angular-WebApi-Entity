@@ -85,7 +85,7 @@ namespace MyApp.Api
         {
             await UsingDb(async db =>
             {
-                var entity = await db.Set<TEntity>().FindAsync(id, cancellationToken);
+                var entity = await db.Set<TEntity>().FindAsync(cancellationToken, id);
                 Mapper.Map(dto, entity);
                 await db.SaveChangesAsync(cancellationToken);
             });

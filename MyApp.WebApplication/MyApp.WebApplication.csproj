@@ -165,12 +165,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\AppComponent.html">
+      <DependentUpon>AppComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\AppComponent.less">
+      <DependentUpon>AppComponent.ts</DependentUpon>
+    </Content>
     <Content Include="App\AsyncContentComponent.html">
       <DependentUpon>AsyncContentComponent.ts</DependentUpon>
     </Content>
     <Content Include="App\AsyncContentComponent.less">
       <DependentUpon>AsyncContentComponent.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="App\AppComponent.ts" />
+    <TypeScriptCompile Include="App\Diagnostics\DebugInfoComponent.ts" />
+    <Content Include="App\Diagnostics\DebugInfoComponent.html" />
     <Content Include="App\Diagnostics\TesterComponent.html">
       <DependentUpon>TesterComponent.ts</DependentUpon>
     </Content>
@@ -207,6 +216,12 @@
     <Content Include="App\Diagnostics\WebApiExceptionComponent.less">
       <DependentUpon>WebApiExceptionComponent.ts</DependentUpon>
     </Content>
+    <Content Include="App\WidgetListComponent.html">
+      <DependentUpon>WidgetListComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\WidgetViewComponent.html">
+      <DependentUpon>WidgetViewComponent.ts</DependentUpon>
+    </Content>
     <Content Include="dist\bootstrap\dist\css\bootstrap.css" />
     <Content Include="dist\font-awesome\css\font-awesome.css" />
     <Content Include="gulpfile.js" />
@@ -227,6 +242,7 @@
     <TypeScriptCompile Include="App\Diagnostics\ErrorViewComponent.ts" />
     <TypeScriptCompile Include="App\Diagnostics\IWebApiException.ts" />
     <TypeScriptCompile Include="App\Diagnostics\JavascriptExceptionComponent.ts" />
+    <TypeScriptCompile Include="App\RouterStates.ts" />
     <TypeScriptCompile Include="App\ThingListComponent.ts" />
     <TypeScriptCompile Include="App\ThingViewComponent.ts" />
   </ItemGroup>
@@ -250,6 +266,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="App\App.ts" />
     <TypeScriptCompile Include="App\Diagnostics\WebApiExceptionComponent.ts" />
+    <TypeScriptCompile Include="App\WidgetListComponent.ts" />
+    <TypeScriptCompile Include="App\WidgetViewComponent.ts" />
     <TypeScriptCompile Include="Typewriter\ThingController.ts">
       <DependentUpon>WebApiControllers.tst</DependentUpon>
       <CustomToolNamespace>..\MyApp.Api\ThingController.cs</CustomToolNamespace>

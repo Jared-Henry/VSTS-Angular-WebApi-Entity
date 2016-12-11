@@ -22,7 +22,9 @@
                     Hide on null promise
                 </label>
             </div>
-            <async-content promise="$ctrl.asyncContentPromise" message="$ctrl.asyncContentMessage" hide-on-null-promise="$ctrl.asyncContentHideOnNullPromise">
+            <async-content promise="$ctrl.asyncContentPromise" 
+                           message="{{$ctrl.asyncContentMessage}}" 
+                           hide-on-null-promise="$ctrl.asyncContentHideOnNullPromise">
                 <div class="alert alert-info">
                     This is the async content.
                 </div>

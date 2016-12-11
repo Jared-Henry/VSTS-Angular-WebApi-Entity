@@ -1,15 +1,34 @@
- {
+// {
+//  "compilerOptions": {
+//    "noImplicitAny": false,
+//    "noEmitOnError": true,
+//    "removeComments": false,
+//    "lib": ["dom","es6"],
+//    "target": "es5",
+//    "noEmit": true,
+//    "typeRoots": ["node_modules/@types"]
+//  },  
+//  "exclude": [
+//    "node_modules",
+//    "wwwroot"
+//  ]
+//}
+{
   "compilerOptions": {
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false,
-    "lib": ["dom","es6"],
     "target": "es5",
-    "noEmit": true,
-    "typeRoots": ["node_modules/@types"]
-  },  
-  "exclude": [
-    "node_modules",
-    "wwwroot"
-  ]
+    "lib": [ "dom", "es6" ],
+    "module": "none",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "noEmit": false,
+    "outFile": "./dist/app.js",
+    //"outDir": "./dist/compiled",
+    "allowJs": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "compileOnSave": true,
+  "include": [ "./app/**/*", "./typewriter/**/*" ]
 }

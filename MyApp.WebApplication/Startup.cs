@@ -37,6 +37,7 @@ namespace WebApplication
             var webApiConfig = new HttpConfiguration();
             webApiConfig.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             webApiConfig.MapHttpAttributeRoutes();
+            webApiConfig.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
             //Configure Ninject Dependency Injection
             app.UseNinjectMiddleware(() =>

@@ -22,4 +22,4 @@ This project is a template application meant to be used as a quick start and/or 
 * [Gulp](http://gulpjs.com/)
 * [Less](http://lesscss.org/)
 * [Web Deploy Package](https://msdn.microsoft.com/en-us/library/dd394698(v=vs.110).aspx) with [Parameters](https://msdn.microsoft.com/en-us/library/ff398068(v=vs.110).aspx)
-* [VSTS Continous Integration](https://www.visualstudio.com/team-services/continuous-integration/)
+* [VSTS Continous Integration](https://www.visualstudio.com/team-services/continuous-integration/) with [Build Status Badge](http://blogs.msmvps.com/molausson/2015/05/06/build-status-badge-for-tfs-2015-and-vso/)

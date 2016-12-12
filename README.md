@@ -7,7 +7,7 @@ This project is a template application meant to be used as a quick start and/or 
 * [AngularJS](https://angularjs.org/)
 * [Bootstrap](http://getbootstrap.com/) with [Bootswatch](https://bootswatch.com/)
 * [Font Awesome](http://fontawesome.io/)
-* [ASP.NET](https://www.asp.net/web-api)
+* [ASP.NET Web API](https://www.asp.net/web-api) with [Owin/IIS](https://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline)
 * [AutoMapper](http://automapper.org/)
 * [Ninject](http://www.ninject.org/)
 * [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723%28v=vs.113%29.aspx?f=255&MSPPError=-2147217396) with [Code First Migrations](https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx)

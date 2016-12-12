@@ -5,6 +5,7 @@
 
     $onInit() {
         this.$scope.$on('asyncContentError', (ev, error) => this.asyncContentError = error);
+        this.$scope.$on('$locationChangeSuccess', () => this.asyncContentError = null);
     }
 
     clearAsyncContentError() {

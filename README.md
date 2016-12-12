@@ -1,7 +1,7 @@
 # VSTS-Angular-WebApi-Entity
 ![alt text](https://jaredkhenry.visualstudio.com/_apis/public/build/definitions/f9563c59-6bb7-43b0-a665-998c3e5ae243/4/badge "Build Badge")
 
-This is a template application meant to be used as a quick start, and an example of various single page application technologies.
+This project is a template application meant to be used as a quick start and/or an example of various single page application technologies.
 
 ## APIs & Libraries
 * [AngularJS](https://angularjs.org/)

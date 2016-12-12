@@ -13,12 +13,13 @@ var dependenciesCopy = {
     base: 'node_modules',
     src: [
         'jquery/dist/jquery.js',
-        'bootstrap/+(dist|less)/**/*.*',
+        'bootstrap/+(dist|less|fonts)/**/*.*',
         'angular/angular.js',
         'angular-ui-router/release/angular-ui-router.js',
         'angular-ui-bootstrap/dist/*.js',
         'lodash/lodash.js',
         'font-awesome/+(css|fonts)/**/*.*',
+        'bootswatch/**/*.*'
     ]
 };
 var dependenciesJs = {

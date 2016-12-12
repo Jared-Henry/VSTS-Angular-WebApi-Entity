@@ -9,8 +9,7 @@ namespace MyApp.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "MyApp.Data.MyDbContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MyApp.Data.MyDbContext context)

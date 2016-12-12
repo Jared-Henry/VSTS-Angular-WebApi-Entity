@@ -194,6 +194,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\App.less">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
     <Content Include="App\AppComponent.html">
       <DependentUpon>AppComponent.ts</DependentUpon>
     </Content>
@@ -254,6 +257,9 @@
       <DependentUpon>WebApiExceptionComponent.ts</DependentUpon>
     </Content>
     <Content Include="App\WidgetListComponent.html">
+      <DependentUpon>WidgetListComponent.ts</DependentUpon>
+    </Content>
+    <Content Include="App\WidgetListComponent.less">
       <DependentUpon>WidgetListComponent.ts</DependentUpon>
     </Content>
     <Content Include="App\WidgetViewComponent.html">

@@ -6,7 +6,7 @@
     }
 
     isWebApiException(): boolean {
-        return this.error && this.error.statusCode;
+        return this.error && this.error.status;
     }
 
     isUnknownException() {

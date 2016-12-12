@@ -4,7 +4,7 @@
 This project is a template application meant to be used as a quick start and/or an example of various single page application technologies.
 
 ## APIs & Libraries
-* [AngularJS](https://angularjs.org/)
+* [AngularJS](https://angularjs.org/) with [UI-Router](https://ui-router.github.io/ng1/)
 * [Bootstrap](http://getbootstrap.com/) with [Bootswatch](https://bootswatch.com/)
 * [Font Awesome](http://fontawesome.io/)
 * [ASP.NET Web API](https://www.asp.net/web-api) with [Owin/IIS](https://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline)

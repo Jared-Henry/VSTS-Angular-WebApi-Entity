@@ -7,9 +7,7 @@ This project is a template application meant to be used as a quick start and/or 
 * [AngularJS](https://angularjs.org/) with [UI-Router](https://ui-router.github.io/ng1/)
 * [Bootstrap](http://getbootstrap.com/) with [Bootswatch](https://bootswatch.com/)
 * [Font Awesome](http://fontawesome.io/)
-* [ASP.NET Web API](https://www.asp.net/web-api) with [Owin/IIS](https://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline)
-* [AutoMapper](http://automapper.org/)
-* [Ninject](http://www.ninject.org/)
+* [ASP.NET Web API](https://www.asp.net/web-api) with [Owin/IIS](https://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline), [AutoMapper](http://automapper.org/), and [Ninject](http://www.ninject.org/)
 * [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723%28v=vs.113%29.aspx?f=255&MSPPError=-2147217396) with [Code First Migrations](https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx)
 
 ## Package Managers
@@ -17,8 +15,7 @@ This project is a template application meant to be used as a quick start and/or 
 * [NuGet](https://www.nuget.org/)
 
 ## Tooling
-* [TypeScript](https://www.typescriptlang.org/)
-* [TypeWriter](https://frhagn.github.io/Typewriter/)
+* [TypeScript](https://www.typescriptlang.org/) with [TypeWriter](https://frhagn.github.io/Typewriter/)
 * [Gulp](http://gulpjs.com/)
 * [Less](http://lesscss.org/)
 * [Web Deploy Package](https://msdn.microsoft.com/en-us/library/dd394698(v=vs.110).aspx) with [Parameters](https://msdn.microsoft.com/en-us/library/ff398068(v=vs.110).aspx)

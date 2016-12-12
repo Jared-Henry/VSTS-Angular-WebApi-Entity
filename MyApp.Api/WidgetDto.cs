@@ -1,4 +1,4 @@
-﻿namespace MyApp.Data
+﻿namespace MyApp.Api
 {
     public class WidgetDto
     {

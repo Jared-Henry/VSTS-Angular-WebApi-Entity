@@ -51,7 +51,8 @@ namespace MyApp.Api
                 var query = (IQueryable<TEntity>)db.Set<TEntity>();
                 if (predicate != null)
                     query = query.Where(predicate);
-                return query.ProjectTo<TDto>().ToArrayAsync(cancellationToken);
+                var projection = query.ProjectTo<TDto>();
+                return projection.ToArrayAsync(cancellationToken);
             });
         }
 

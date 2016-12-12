@@ -17,6 +17,7 @@ using System.Web.Routing;
 using MyApp.Data.Migrations;
 using System.Web.WebPages;
 using System.Web;
+using MyApp.Api;
 
 [assembly: OwinStartup(typeof(WebApplication.Startup))]
 
@@ -32,6 +33,8 @@ namespace WebApplication
             //Configure AutoMapper
             Mapper.Initialize(config =>
             {
+                config.CreateMap<Thing, ThingDto>();
+                config.CreateMap<Widget, WidgetDto>();
                 config.CreateMissingTypeMaps = true;
             });
 

@@ -3,11 +3,14 @@
 
 This is a template application meant to be used as a quick start, and an example of various single page application technologies.
 
-## APIs
+## APIs & Libraries
 * [AngularJS](https://angularjs.org/)
-* [Bootstrap](http://getbootstrap.com/)
+* [Bootstrap](http://getbootstrap.com/) with [Bootswatch](https://bootswatch.com/)
+* [Font Awesome](http://fontawesome.io/)
 * [ASP.NET](https://www.asp.net/web-api)
-* [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723%28v=vs.113%29.aspx?f=255&MSPPError=-2147217396)
+* [AutoMapper](http://automapper.org/)
+* [Ninject](http://www.ninject.org/)
+* [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723%28v=vs.113%29.aspx?f=255&MSPPError=-2147217396) with [Code First Migrations](https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx)
 
 ## Package Managers
 * [NPM](https://www.npmjs.com/)
@@ -18,3 +21,4 @@ This is a template application meant to be used as a quick start, and an example
 * [TypeWriter](https://frhagn.github.io/Typewriter/)
 * [Gulp](http://gulpjs.com/)
 * [Less](http://lesscss.org/)
+* [Web Deploy Package](https://msdn.microsoft.com/en-us/library/dd394698(v=vs.110).aspx) with [Parameters](https://msdn.microsoft.com/en-us/library/ff398068(v=vs.110).aspx)

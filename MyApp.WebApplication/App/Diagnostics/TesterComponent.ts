@@ -47,6 +47,7 @@
                 this.asyncContentPromise = httpDeferred.promise;
                 httpDeferred.reject({
                     data: {
+                        message: 'An error occured.',
                         exceptionMessage: 'Test exception message.',
                         exceptionType: 'TestExceptionType',
                         stackTrace: `Stack trace line 1

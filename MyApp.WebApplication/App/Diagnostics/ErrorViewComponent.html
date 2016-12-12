@@ -6,9 +6,18 @@
     <p>
         {{$ctrl.error.config.method}}: {{$ctrl.error.config.url}}
     </p>
-    <web-api-exception exception="$ctrl.error.data"></web-api-exception>
+    <p>
+        {{$ctrl.error.data.message}}
+    </p>
+    <web-api-exception exception="$ctrl.error.data" ng-if="$ctrl.error.data.exceptionMessage"></web-api-exception>
 </div>
 <div class="javascript-error" ng-if="$ctrl.isJavascriptException()">
     <h2 class="text-danger">Javascript Exception</h2>
     <javascript-exception exception="$ctrl.error"></javascript-exception>
+</div>
+<div class="javascript-error" ng-if="$ctrl.isUnknownException()">
+    <h2 class="text-danger">Unknown Exception</h2>
+    <p>
+        An unknown exception occured.
+    </p>
 </div>

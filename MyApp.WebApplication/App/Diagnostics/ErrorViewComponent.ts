@@ -6,7 +6,11 @@
     }
 
     isWebApiException(): boolean {
-        return this.error && this.error.data && this.error.data.exceptionMessage;
+        return this.error && this.error.statusCode;
+    }
+
+    isUnknownException() {
+        return !this.isWebApiException && !this.isJavascriptException();
     }
 }
 

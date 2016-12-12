@@ -15,6 +15,8 @@ using Ninject.Web.WebApi.OwinHost;
 using System.Data.Entity.Infrastructure;
 using System.Web.Routing;
 using MyApp.Data.Migrations;
+using System.Web.WebPages;
+using System.Web;
 
 [assembly: OwinStartup(typeof(WebApplication.Startup))]
 
@@ -47,7 +49,16 @@ namespace WebApplication
                 return kernel;
             });
             app.UseNinjectWebApi(webApiConfig);
-        }
 
+            RouteTable.Routes.Add("default", new Route("{*path}", new DefaultRouteHandler()));
+        }
+    }
+
+    internal class DefaultRouteHandler : IRouteHandler
+    {
+        public IHttpHandler GetHttpHandler(RequestContext requestContext)
+        {
+            return WebPageHttpHandler.CreateFromVirtualPath("~/default.cshtml");
+        }
     }
 }

@@ -7,8 +7,13 @@ body{
 app {
     display: block;
 
-    nav {
+    nav.navbar {
         border-radius: 0px;
+    }
+
+    button + async-content {
+        display: inline-block;
+        margin-left: .5em;
     }
 
     table {
@@ -50,14 +55,6 @@ app {
 
         .btn > .fa + span {
             display: inline-block;
-            margin-left: .5em;
-        }
-
-        .btn + async-content {
-            margin-left: .5em;
-        }
-
-        async-content + .btn {
             margin-left: .5em;
         }
 

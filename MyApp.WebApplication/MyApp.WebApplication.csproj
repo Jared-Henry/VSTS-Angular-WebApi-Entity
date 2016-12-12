@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <ApplicationInsightsResourceId>/subscriptions/a417102b-55d8-4547-aad3-b8569d649dcb/resourcegroups/MyAppTemplate/providers/microsoft.insights/components/MyAppTemplate</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
